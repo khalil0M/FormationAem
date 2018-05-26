@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1527254630215
+Bnd-LastModified: 1527346441180
 Build-Jdk: 1.8.0_121
 Built-By: CitySystem
 Bundle-Description: Tps-Apache-Sling - inscriptions-core
@@ -10,8 +10,8 @@ Bundle-Version: 0.0.1.SNAPSHOT
 Created-By: Apache Maven Bundle Plugin
 Export-Package: com.models.user;uses:="org.apache.sling.api,org.apache.s
  ling.models.annotations";version="0.0.1"
-Import-Package: org.apache.sling.api;version="[2.3,3)",org.apache.sling.
- models.annotations;version="[1.2,2)"
+Import-Package: javax.inject;version="[1.0,2)",org.apache.sling.api;vers
+ ion="[2.3,3)",org.apache.sling.models.annotations;version="[1.2,2)"
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
 Sling-Model-Packages: com.models.user
 Tool: Bnd-3.0.0.201509101326
