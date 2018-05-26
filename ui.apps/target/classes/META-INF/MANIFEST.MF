@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1527254632293
+Build-Jdk: 1.8.0_121
+Built-By: CitySystem
+Bundle-Description: Inscription Student - Apache Sling Application
+Bundle-ManifestVersion: 2
+Bundle-Name: Tps-Apache-Sling inscription
+Bundle-SymbolicName: Tps-Apache-Sling.ui.apps
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Sling-Initial-Content: SLING-INF/apps/sling-training;overwrite:=true;uni
+ nstall:=true;path:=/apps/sling-training,SLING-INF/content;overwrite:=tr
+ ue;uninstall:=true;path:=/content,SLING-INF/etc/sling-training;overwrit
+ e:=true;uninstall:=true;path:=/etc/sling-training
+Sling-Nodetypes: SLING-INF/nodetypes/nodetypes.cnd
+Tool: Bnd-3.0.0.201509101326

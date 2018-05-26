@@ -1,0 +1,23 @@
+<html>
+<%@taglib prefix="sling" uri="http://sling.apache.org/taglibs/sling" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<sling:defineObjects />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tp 1</title>
+
+       <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/etc/sling-training/css/style.css" rel="stylesheet">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+        <script src="/etc/sling-training/js/app.js" type="text/javascript" ></script>
+
+</head>
+
+<body>
+          <sling:adaptTo adaptable="${resource}" adaptTo="userModel" var="userM" />
+          <c:set var="v_email" value="${userM.email}" />
+          <h1>Authentification</h1>
+          <h1>${v_email}</h1>
+</body>

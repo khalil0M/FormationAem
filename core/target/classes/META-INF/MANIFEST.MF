@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1527254630215
+Build-Jdk: 1.8.0_121
+Built-By: CitySystem
+Bundle-Description: Tps-Apache-Sling - inscriptions-core
+Bundle-ManifestVersion: 2
+Bundle-Name: inscriptions-core
+Bundle-SymbolicName: Tps-Apache-Sling.core
+Bundle-Version: 0.0.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.models.user;uses:="org.apache.sling.api,org.apache.s
+ ling.models.annotations";version="0.0.1"
+Import-Package: org.apache.sling.api;version="[2.3,3)",org.apache.sling.
+ models.annotations;version="[1.2,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Sling-Model-Packages: com.models.user
+Tool: Bnd-3.0.0.201509101326

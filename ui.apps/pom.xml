@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>Tp1-Sling</artifactId>
+        <groupId>Tps-Apache-Sling</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>ui.apps</artifactId>
+    <groupId>Tps-Apache-Sling</groupId>
+    <packaging>bundle</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>Tps-Apache-Sling inscription</name>
+    <description>Inscription Student - Apache Sling Application</description>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <version>3.0.0</version>
+                <configuration>
+                    <instructions>
+                        <!-- Stop bnd complaining about unused Private-Package instructions -->
+                        <Private-Package></Private-Package>
+                        <Sling-Nodetypes>
+                            SLING-INF/nodetypes/nodetypes.cnd
+                        </Sling-Nodetypes>
+                        <Sling-Initial-Content>
+                            SLING-INF/apps/sling-training;overwrite:=true;uninstall:=true;path:=/apps/sling-training,
+                            SLING-INF/content;overwrite:=true;uninstall:=true;path:=/content,
+                            SLING-INF/etc/sling-training;overwrite:=true;uninstall:=true;path:=/etc/sling-training
+                        </Sling-Initial-Content>
+                    </instructions>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>maven-sling-plugin</artifactId>
+                <version>2.1.2</version>
+                <configuration>
+                    <slingUrl>http://${sling.host}:${sling.port}/system/console</slingUrl>
+                    <user>${sling.user}</user>
+                    <password>${sling.password}</password>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <profile>
+            <id>autoInstallBundle</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.sling</groupId>
+                        <artifactId>maven-sling-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>install-bundle</id>
+                                <goals>
+                                    <goal>install</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+</project>
